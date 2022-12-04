@@ -25,7 +25,7 @@ function frontend_directory(; allow_bundled::Bool=true)
     if allow_bundled && isdir(project_relative_path("frontend-dist")) && (get(ENV, "JULIA_PLUTO_FORCE_BUNDLED", "nein") == "ja" || !is_pluto_dev())
         "frontend-dist"
     else
-        "frontend"
+        "frontend/dist"
     end
 end
 
